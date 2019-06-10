@@ -15,11 +15,19 @@
         android:padding="@dimen/inner_frame_layout_padding"
         app:boxedEdges="all">
 
-        <TextView
-            android:id="@+id/text"
+        <android.support.wearable.view.GridViewPager
+            android:id="@+id/pager"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:keepScreenOn="true"
+            ></android.support.wearable.view.GridViewPager>
+
+        <android.support.wearable.view.DotsPageIndicator
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hello_world" />
+            android:id="@+id/page_ind"
+            android:layout_gravity="center_horizontal|bottom"/>
+
 
     </FrameLayout>
 </android.support.wear.widget.BoxInsetLayout>
