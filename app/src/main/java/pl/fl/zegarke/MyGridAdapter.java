@@ -31,7 +31,9 @@ public class MyGridAdapter extends FragmentGridPagerAdapter {
         master.add(new Row( cardFragment("Wymieszaj","dokładnie")));
         master.add(new Row( cardFragment("Rozgrzej","patelnie")));
         master.add(new Row( cardFragment("Nałóż","porcje")));
-        master.add(new Row( cardFragment("Smaż","")));
+        master.add(new Row(
+                cardFragment("Smaż","")
+        ));
         master.add(new Row( cardFragment("Zrób Flipa","")));
         master.add(new Row( cardFragment("Zrób","stos"),cardFragment("Smacznego","")));
         defaultCololr=new ColorDrawable(R.color.blue);
@@ -109,7 +111,7 @@ public class MyGridAdapter extends FragmentGridPagerAdapter {
             TransitionDrawable transitionDrawable = new TransitionDrawable(new Drawable[]{defaultCololr,drawable} );
              lruCache.put(myRow, transitionDrawable);
              notifyRowBackgroundChanged(myRow);
-             transitionDrawable.startTransition(3000);
+             transitionDrawable.startTransition(1000);
         }
 
         @Override
